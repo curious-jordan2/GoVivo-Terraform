@@ -8,6 +8,18 @@ variable "application" {
 	}
 }
 
+variable "local_os" {
+	description = "The local operating system where Terraform is running"
+	type        = string
+	default     = "windows"
+
+	validation {
+    condition     = contains(["windows", "linux"], var.local_os)
+    error_message = "local_os must be either 'windows' or 'linux'."
+	}
+}
+
+
 variable "image" {
 	description = "The Docker image to use for the container"
 	type        = string

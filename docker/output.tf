@@ -1,4 +1,4 @@
 output "example" {
     description = "This is an example output."
-    value = "Example: resource.value"
+    value = null_resource.example_resource.id
 }

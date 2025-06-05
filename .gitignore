@@ -1,2 +1,4 @@
 azure/.terraform/providers
 docker/.terraform/providers
+docker/.terraform.lock.hcl
+docker/.terraform/terraform.tfstate

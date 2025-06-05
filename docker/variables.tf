@@ -29,10 +29,11 @@ variable "image" {
     condition = contains([
 		"ubuntu:20.04",
 		"ubuntu:22.04",
+		"mcr.microsoft.com/windows/servercore:ltsc2025",
 		"mcr.microsoft.com/windows/servercore:ltsc2022",
 		"mcr.microsoft.com/windows/servercore:ltsc2019"
     ], var.image)
-    error_message = "The image must be one of: ubuntu:20.04, ubuntu:22.04, mcr.microsoft.com/windows/servercore:ltsc2022, or mcr.microsoft.com/windows/servercore:ltsc2019"
+    error_message = "The image must be one of: ubuntu:20.04, ubuntu:22.04, mcr.microsoft.com/windows/servercore:ltsc2025, mcr.microsoft.com/windows/servercore:ltsc2022, or mcr.microsoft.com/windows/servercore:ltsc2019"
 	}
 }
 

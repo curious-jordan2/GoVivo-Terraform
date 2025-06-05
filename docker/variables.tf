@@ -45,3 +45,9 @@ variable "container_name" {
 	error_message = "The container name must be longer than two characters."
 	}
 }
+
+variable "external_port" {
+	description = "The externally facing port."
+	type = number
+	default = 8000
+}

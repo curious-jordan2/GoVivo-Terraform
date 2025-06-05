@@ -1,4 +1,4 @@
-output "example" {
-    description = "This is an example output."
-    value = null_resource.example_resource.id
+output "url" {
+    description = "Browser URL for container site"
+    value = join(":", ["http://localhost", tostring(var.external_port)])
 }

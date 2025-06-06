@@ -5,12 +5,13 @@ locals {
 
 # Create a container
 resource "docker_container" "container" {
-    image = docker_image.image.image_id
-    name  = var.container_name
+    name         = var.container_name
+    image        = docker_image.image.image_id
     network_mode = local.network_mode
+    command      = ["powershell", "-Command", "Start-Sleep -Seconds 3600"]
+
     ports {
-        internal = 80
-        external = var.external_port
-        protocol = "tcp"
+    internal = 8000
+    external = var.external_port
     }
 }
